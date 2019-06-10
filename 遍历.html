@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>循环/遍历</title>
+    <script type="text/javascript">
+    //定义一个数组和对象
+    let arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+    let obj = { a: 1, b: 2, c: 3, d: 4 }
+
+    // for 用来序号遍历数组对象  遍历的值Wie数组元素索引
+    for (let i = 0; i < arr.length; i++) {
+        cosole.log(i); //0,1,2,3,4,5
+        console.log(arr[i]); //a,b,c,d,e,f
+    }
+
+    // forEach(item,index,arr) 遍历数组元素  第一个参数为数组元素，第二个参数为数组元素索引，第三个参数为数组本身(可选)
+
+    arr.forEach((item, index) => {
+        console.log(item); //a,b,c,d,e,f
+        console.log(index); //0,1,2,3,4,5
+    })
+
+    // map(item,index,arr) 遍历数组 第一个参数为数组元素，第二个参数为数组元素索引，第三个参数为数组本身(可选)
+
+    arr.map((item, index) => {
+        console.log(item); //a,b,c,d,e,f
+        console.log(index); //0,1,2,3,4,5
+    })
+
+    // for ... of 可循环对象和数组 推荐遍历数组  遍历的值为数组元素
+
+    for (let value of arr) {
+        console.log(value) //a,b,c,d,e,f
+    }
+
+    //for... in 可循环对象和数组，推荐循环对象
+    for (let key in obj) {
+        console.log(key); //a,b,c,d,e,f
+        console.log(obj[key]); //1,2,3,4,5
+    }
+
+    /**
+			总结：
+
+    用于遍历数组元素使用：for()，forEach()，map()，for...of
+    
+    用于循环对象属性使用：for...in
+
+		*/
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
