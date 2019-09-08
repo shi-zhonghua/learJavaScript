@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>偏移量</title>
+    <script type="text/javascript">
+    function myFunction() {
+    	let oDiv=document.querySelector("#demo");
+        let offLeft=oDiv.offsetLeft;
+        let offTop=oDiv.offsetTop;
+        let offWidth=oDiv.offsetWidth;
+        alert(offLeft)
+    }
+    </script>
+    <style type="text/css">
+    	#demo{
+    		width:100px;
+    		height: 100px;background: #f0f;
+    		margin:20px;
+    	}
+    </style>
+</head>
+
+<body>
+    <div id="demo">内容</div>
+    offsetLeft
+    offsetTop
+    offsetWidth
+    offsetHeight
+    <button onclick="myFunction()">点我</button>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    .content {
+        width: 500px;
+        height: 500px;
+        background: #fcf;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    /*固定宽高垂直水平居中
+		.item{
+			width: 200px;
+			height: 200px;
+			position:absolute;
+			left: 50%;
+			top:50%;
+			margin:-100px 0 0 -100px;
+			background:#ccc;
+		}*/
+    /*固定宽高垂直水平居中 
+		.item{
+			width: 200px;
+			height: 200px;
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom: 0;
+			margin:  auto;
+			background: green;
+		}*/
+
+    /*未知高度垂直水平居中
+    .child {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: -50%;
+        transform: translateX(-50%) translateY(-50%);
+        background: green;
+    }*/
+	/*flex 垂直水平居中*/
+    #father {
+        width: 500px;
+        height: 300px;
+        background-color: skyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #son {
+        background-color: green;
+    }
+    </style>
+</head>
+
+<body>
+    <!--     <div class="content">
+        <div class="item">
+			固定宽高
+		</div>
+        <div class="child">
+            为止宽度和高度
+        </div>
+    </div> -->
+    <div id="father">
+        <div id="son">我是块级元素</div>
+    </div>
+</body>
+
+</html>

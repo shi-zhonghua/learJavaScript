@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    /**
+    const student = {
+        name: 'jsPool',
+        age: 20,
+        scores: {
+            math: 95,
+            chinese: 98,
+            english: 93
+        }
+    }
+
+    function showScore(student) {
+        console.log('学生名:' + student.name);
+        console.log('数学成绩:' + (student.scores.math || 0));
+        console.log('语文成绩:' + (student.scores.chinese || 0));
+        console.log('英语成绩:' + (student.scores.english || 0));
+    }
+    showScore(student)
+	*/
+    /**
+
+		对象解构赋值
+
+    */
+
+    // 对象解构赋值  设置默认值 
+    let details = {
+        firstName: 'Code',
+        lastName: 'Burst',
+        age: undefined
+    }
+    const { firstName, lastName, age = '33' } = details
+    console.log(firstName)
+    console.log(lastName)
+    console.log(age)
+
+    console.log('*********嵌套对象')
+    // 嵌套对象解构赋值
+    let sts = {
+        name: '小米',
+        test: '期末考试',
+        add: ['河南省', '北京', '上海'],
+        days: {
+            desc: '这是一天',
+            time: '00:00:00',
+            sort: ['上午', '中午', '下午']
+        }
+    }
+    let { name,test,add:[add1,add2,add3],days:{desc,time,sort:[r1,r2,r3]} } = sts;
+    console.log(name,test,add1,add2,add3,desc,time,r1,r2,r3)
+
+
+
+    /**
+
+		数据解构赋值
+
+    */
+
+    console.log('*********数组')
+    // 数组解构赋值
+    let arr = [1, 2, 3, 4];
+    const [one, two, three] = arr;
+    console.log(one)
+    console.log(two)
+    console.log(three)
+
+    console.log('********嵌套数组')
+
+    //嵌套数组解构赋值
+    let colors = ['red', ['green', 'yellow'], 'blue'];
+    let [firstColor, [s1, s2], threeColor] = colors;
+    console.log(firstColor, s1, s2, threeColor);
+    
+    console.log('******不定元素')
+
+    //不定元素
+    let colorsb = ['red', 'green', 'blue'];
+    let [firstColorb, ...otherColors] = colorsb;
+    console.log(firstColorb); // red
+    console.log(otherColors); // ['green','blue']
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

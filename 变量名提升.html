@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    // var num = 11;
+
+    // console.log(num);
+    // var car = {
+    //     type: "porsche",
+    //     model: "911",
+    //     color: "white",
+    //     num:22,
+    //     bint:{
+
+    //     }
+    // };
+    // console.log(car.num);
+
+
+    // 1
+    // var num=10;
+    // function fun(){
+    // 	var num=20;
+    // 	console.log(num);
+    // 	num=30;
+    // }
+    // fun()
+
+    // 2
+    // var a=10;
+    // f1();
+    // function f1(){
+    // 	var b=9;
+    // 	console.log(a);//undefined
+    // 	console.log(b);//9
+    // 	var a='123';
+    // }
+
+    // var  a;
+    // function f1(){
+    // 	var b;
+    // 	var a;
+    // 	b=9;
+    // 	console.log(a);//undefined
+    // 	console.log(b);//9
+    // 	a='123';
+
+    // }
+    // a=18;
+    // f1()
+
+
+    // var a;
+    // function f1(){
+    // 	console.log(a);
+    // }
+    // f1()
+
+    // function f1() {
+    //     var a;
+    //     a = b = c = 9;
+    //     console.log(a);
+    //     console.log(b);
+    //     console.log(c);
+    // }
+    // f1();
+    // console.log(c);
+    // console.log(b);
+    // console.log(a);// a is defined
+
+
+    // var a=10;
+    // var b=a;
+    // b=11;
+    // console.log(a,b);// a=10;b=11;
+
+    // var a=1;
+    // let b=2;
+    // function f1(){
+    // 	console.log(a);//1
+    // 	console.log(b)//2
+
+    // }
+    // f1()
+
+    // function f1(){
+    // 	 a=1;
+    // 	let b=2;
+    // 	console.log(a,b)
+    // }
+    // f1()
+    // console.log(a)
+    // console.log(b)
+
+    // 表达式型函数必须先于调用
+    // var f1=function(){
+    // 	return '函数1'
+    // }
+    // console.log('first'+ f1());
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // 对象是按引用传值 浅拷贝
+    // var obj1={a:1,b:2,c:3};
+    // var obj2=obj1;
+    // obj2.a=10;
+    // console.log(obj1,obj2)
+
+
+    // 深拷贝 手动拷贝 一个一模一样的对象
+    // var obj1={a:1,b:2};
+    // var obj2={a:obj1.a,b:obj1.b};
+    // obj1.a=10;
+    // console.log(obj1,obj2);
+
+    // 深拷贝  转成json 再转回来
+    // var obj1={a:1,b:2};
+    // var obj2=JSON.parse(JSON.stringify(obj1));
+    // obj1.a=100;
+    // console.log(obj1,obj2)
+
+
+    // var obj1=new Object();
+    // var obj2=obj1;
+    // obj1.name="张三";
+    // console.log(obj1.name,obj2.name)
+
+
+    // function setName(obj){
+    // 	obj.name="张三";
+    // 	console.log(obj.name)
+    // }
+    // var person=new Object();
+    // setName(person);
+    // console.log(person.name)
+
+
+    function setName(obj){
+
+    	obj.name="张胜男";
+    	console.log(obj);
+    	obj=new Object();
+    	obj.name="李胜男";
+    	console.log(obj)
+
+    }
+    var person=new Object();
+    setName(person);
+    console.log(person.name)
+    </script>
+</head>
+
+<body>
+    <div class="parent">
+    </div>
+</body>
+
+</html>

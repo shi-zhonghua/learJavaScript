@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var str='asdfssaaasasasasaa';
+		function filtersStr(str){
+			// 将字符串转换成数组
+			var newArr=str.split('');
+			//创建一个对象
+			var json=[];
+			// b遍历数组，判断对象中是否存在数组中的值，如果存在值+1，不存在赋值为1
+			for(var i=0;i<newArr.length;i++){
+				// console.log(newArr[i])
+				if(json[newArr[i]]){
+					// console.log('有')
+					json[newArr[i]]+=1;
+				}else{
+					json[newArr[i]]=1;
+					// console.log(json[newArr[i]]);
+
+
+				}
+			}
+			console.log(json)
+			// 定义两个变量，存储字符串值，跟字符串出现的次数
+			var num=0;
+			var number="";
+			for(var k in json){
+				if(json[k]>num){
+					num=json[k];
+					number=k;
+				}
+				console.log(json[k])
+			}
+			
+			// app.innetHTML='出现次数最多的是'+number +'出现了'+num +'次';
+			console.log('出现次数最多的是'+number +'出现了'+num +'次')
+		}
+		filtersStr(str)
+	</script>
+</head>
+<body>
+	<div id="app">
+		
+	</div>
+	
+</body>
+</html>

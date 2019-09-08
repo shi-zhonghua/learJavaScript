@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>event</title>
+	<script type="text/javascript">
+		var btn=document.getElementById("myBtn");
+		alert(btn);
+		btn.click=function(event){
+			alert(event.type)
+		}
+	</script>
+</head>
+<body>
+	<div id="myBtn">btn</div>
+</body>
+</html>

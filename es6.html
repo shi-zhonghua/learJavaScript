@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+    var a = 10;
+    let b = 11;
+    console.log(a, b);
+
+    function text() {
+        console.log(a);
+        a = 21;
+        // var a=222;
+        console.log(a);
+    }
+    text();
+
+    function sum() {
+        var res = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            res += arguments[i]
+        }
+        return res;
+    }
+    console.log('sss')
+
+    console.log(sum(1, 2, 3))
+    var number = [];
+
+    function aa(arr) {
+        var res = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (typeof(arr[i]) === 'number') {
+                res.push(arr[i])
+            } else {
+                number.push(arr[i])
+            }
+        }
+        return res;
+    }
+    console.log(aa([1, 2, 'a', 'c', 4]));
+    console.log(number)
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
