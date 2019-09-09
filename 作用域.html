@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var fun0='gloabl content';
+		console.log(fun0);
+
+		function fun1(){
+			console.log('fun1');
+			function fun2(){
+				console.log('fun2');
+				function fun3(){
+					console.log('fun3')
+				}
+				fun3()
+			}
+			fun2()
+		}
+
+		fun1();
+	</script>
+
+</head>
+<body>
+	
+</body>
+</html>

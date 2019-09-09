@@ -5,18 +5,176 @@
     <meta charset="UTF-8">
     <title>Function</title>
     <script type="text/javascript">
-    function sum(num1, num2) {
-        return num1 + num2
-    }
-    var sum = function(num1, num2) {
-        return num1 + num2
-    }
+    // function sum(num1, num2) {
+    //     return num1 + num2
+    // }
+    // var sum = function(num1, num2) {
+    //     return num1 + num2
+    // }
 
-    function say(value) {
-        alert(value);
+    // function say(value) {
+    //     alert(value);
+    // }
+    // alert(say);// 字符串
+    // alert(say('hi js.'));// 执行函数
+
+
+    // var a=1;
+    // function b(){
+    //     a=10;
+    //     console.log(a);// 10
+    //     return;
+    //     function a(){}
+    // }
+    // b();
+    // console.log(a)// 1
+
+    // function f1() {
+    //     // 编译过程  变量提升 var bar 
+    //     var bar = function bar() {
+    //         return 3;
+    //     }
+    //     return bar();
+
+    //     function bar() {
+    //         return 8;
+    //     }
+    // }
+
+    // console.log(f1())
+
+
+
+    // var a=100;
+    // function a(){
+    //     console.log(a)
+    // }
+    // a()
+    // 解析为：变量提升，函数提升，函数提升比变量提升更高
+    // var a=function(){console.log(a)}
+    // var a;
+    // a=100;
+    // a();
+
+    // function a(){
+    //     var a =100;
+    //     console.log(a)
+    // }
+    // var a;
+    // console.log(a)//function
+    // a()
+
+    // var d=22;
+    // function d(){
+    //     var a=b=c=10;// 解释为： var
+    //     console.log(a);//10
+    //     console.log(b);//10
+    //     console.log(c);//10
+    // }
+    // d()
+    // console.log(d)
+
+    // console.log(typeof fn);// function
+    // function fn(){
+    //     console.log('fn')
+    // }
+    // var fn;
+
+    // 上面代码输出的是 function  而不是undefined 这说明变量声明没有覆盖掉函数声明 
+    // 函数声明优先级要高于变量的声明，但是变量赋值后就会覆盖之前声明的函数
+
+
+
+    // function fn(){
+    //     console.log('fn')
+    // }
+    // var fn=10;
+    // console.log(typeof fn);// number
+
+
+
+    // function x(){
+    //     console.log(14)
+    // }
+    // var x;
+    // console.log(x);
+    // x()
+
+
+    // var a = 1;
+
+    // function b() {
+    //     a = 10;
+    //     return;
+
+    //     function a() {
+    //         console.log(a) 
+    //     }
+    //     a();// a is not function 
+    // }
+    // b();
+    // console.log(a) 1
+
+
+    // function foo(){
+    //     var a=1;
+    //     function a(){};
+    //     console.log( a) //1
+    // }
+    // foo()
+    // function foo(){
+    //     var a;
+    //     function a(){};
+    //     console.log( a) // function 
+    // }
+    // foo()
+
+    // 隐式全局变量 不会提升
+    // function foo() {
+    //     console.log(a);
+    //     console.log(b); // 报错
+    //     b = 'aaa';
+    //     var a = 'bbb';
+    //     console.log(a);
+    //     console.log(b);
+    // }
+    // foo();
+
+    // function foo(){
+    //     console.log(1);
+    // }
+    // var foo=function (){
+    //     console.log(2)
+    // };
+    // foo() 2
+
+    // console.log(fn);// fn()
+    // function fn(){};
+    // var fn='hello';
+    // console.log(fn) // hell
+
+    // function v(){
+    //     console.log(a);// undefinend
+    //     a="aaa";
+    //     var a="bbbb";
+    //     console.log(a) // bbbb
+    // }
+    // v()
+
+
+    function selectFrom(num1, num2) {
+        var choices = num2 - num1;
+        return Math.floor(Math.random() * choices + num1);
     }
-    alert(say);// 字符串
-    alert(say('hi js.'));// 执行函数
+    var rand = selectFrom(2, 9);
+    // console.log(rand)
+    var arr = [];
+    for (var i = 0; i < 10; i++) {
+        arr.push(selectFrom(2, 9))
+    }
+    console.log(arr)
+
+   
     </script>
 </head>
 
